@@ -56,18 +56,18 @@ header {
     position: relative;
 
     h2 {
-        margin: 0;
-        font-weight: 600;
+      margin: 0;
+      font-weight: 600;
     }
 
     p {
-        color: var(--grayish-blue);
-        margin-bottom: 40px;
+      color: var(--grayish-blue);
+      margin-bottom: 40px;
     }
 
     img {
-        display: block;
-        margin-left: auto;
+      display: block;
+      margin-left: auto;
     }
 
     &::after {
@@ -92,9 +92,18 @@ header {
       background-color: var(--blue);
     }
 
-    &--self{
-        transform: translateY(50%);
+    &--self {
+      transform: translateY(50%);
     }
+  }
+}
 
+@media screen and (max-width: 792px) {
+  .container {
+    &__box {
+      &--self {
+        transform: translateY(0);
+      }
+    }
   }
 }

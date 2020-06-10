@@ -86,4 +86,10 @@ header p {
   transform: translateY(50%);
 }
 
+@media screen and (max-width: 792px) {
+  .container__box--self {
+    transform: translateY(0);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
