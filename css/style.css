@@ -54,8 +54,10 @@ header p {
   margin: 0;
   font-weight: 600;
 }
-.container__box p {
+.container__box h3 {
   color: var(--grayish-blue);
+  font-size: 15px;
+  font-weight: 200;
   margin-bottom: 40px;
 }
 .container__box img {
