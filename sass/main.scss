@@ -1,43 +1,100 @@
 :root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
 
- --red: hsl(0, 78%, 62%);
- --cyan: hsl(180, 62%, 55%);
- --orange: hsl(34, 97%, 64%);
- --blue: hsl(212, 86%, 64%);
-
- --very-dark-blue: hsl(234, 12%, 34%);
- --grayish-blue: hsl(229, 6%, 66%);
- --very-light-gray: hsl(0, 0%, 98%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
 }
 
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--very-light-gray);
-    font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+  font-size: 15px;
 }
 
 header {
-    margin: 90px auto;
-    max-width: 500px;
-    text-align: center;
+  margin: 90px auto;
+  max-width: 500px;
+  text-align: center;
 
-    h1 {
-        font-weight: 200;
-        font-size: 30px;
+  h1 {
+    font-weight: 200;
+    font-size: 30px;
 
-        span {
-            font-weight: 600;
-        }
+    span {
+      font-weight: 600;
+    }
+  }
 
+  p {
+    color: var(--grayish-blue);
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__box {
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 5px;
+    // height: 250px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    position: relative;
+
+    h2 {
+        margin: 0;
+        font-weight: 600;
     }
 
     p {
         color: var(--grayish-blue);
+        margin-bottom: 40px;
     }
 
+    img {
+        display: block;
+        margin-left: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+    }
+
+    &--cyan::after {
+      background-color: var(--cyan);
+    }
+    &--red::after {
+      background-color: var(--red);
+    }
+    &--orange::after {
+      background-color: var(--orange);
+    }
+    &--blue::after {
+      background-color: var(--blue);
+    }
+
+    &--self{
+        transform: translateY(50%);
+    }
+
+  }
 }
